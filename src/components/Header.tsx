@@ -20,7 +20,6 @@ function Header() {
       display: "flex",
       flexDirection: "row",
       height: 50,
-
     }
   })
 
