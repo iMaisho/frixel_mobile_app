@@ -1,5 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import { useTheme } from "../contexts/ThemeContext";
+import HeroHeader from "./body_components/HeroHeader";
 
 
 function Body() {
@@ -8,14 +9,13 @@ function Body() {
 
   const styles = StyleSheet.create({
     container: {
-      height: 500,
       backgroundColor: theme.background
 }
   })
 
   return (
     <View style={styles.container}>
-
+<HeroHeader></HeroHeader>
     </View>
   )
 }
