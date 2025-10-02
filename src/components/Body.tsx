@@ -1,6 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import { useTheme } from "../contexts/ThemeContext";
 import HeroHeader from "./body_components/HeroHeader";
+import WhySection from "./body_components/WhySection";
 
 
 function Body() {
@@ -9,13 +10,17 @@ function Body() {
 
   const styles = StyleSheet.create({
     container: {
-      backgroundColor: theme.background
+      backgroundColor: theme.background,
+      display: "flex",
+      flexDirection: "column",
+      height:10000
 }
   })
 
   return (
     <View style={styles.container}>
-<HeroHeader></HeroHeader>
+      <HeroHeader></HeroHeader>
+      <WhySection></WhySection>
     </View>
   )
 }
