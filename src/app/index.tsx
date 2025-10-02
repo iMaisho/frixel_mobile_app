@@ -7,15 +7,15 @@ import { Providers } from "../contexts/Providers";
 
 export default function Index() {
   return (
-    <Providers>
-<ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-  <View style={{ flex: 1, justifyContent: 'space-between' }}>
+  <Providers>
+    <Header></Header>
 
-       <Header></Header>
+    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+      <View style={{ flex: 1, justifyContent: 'space-between' }}>
         <Body></Body>
-      <Footer></Footer>
-  </View>
-</ScrollView>
-      </Providers>
+        <Footer></Footer>
+      </View>
+    </ScrollView>
+  </Providers>
   );
 }

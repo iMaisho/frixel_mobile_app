@@ -14,7 +14,14 @@ function Header() {
       justifyContent: "space-around",
       height: 100,
       backgroundColor: theme.primary,
-      alignItems:"center"
+      alignItems: "center",
+      borderRadius:50,
+      position: "absolute",
+      top: 16,
+      left: 0,
+      right: 0,
+      zIndex: 10,
+
     },
     interactiveElements: {
       display: "flex",

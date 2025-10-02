@@ -8,13 +8,14 @@ function HeroHeader() {
 
   const styles = StyleSheet.create({
     container: {
-      height: 400,
+      height: 500,
       backgroundColor: theme.backgroundLight,
       display:"flex",
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      gap:20
+      gap: 20,
+      paddingTop:100
 
 
 
