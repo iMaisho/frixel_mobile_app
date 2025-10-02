@@ -1,6 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import { useTheme } from "../contexts/ThemeContext";
 import HeroHeader from "./body_components/HeroHeader";
+import ValuesSection from "./body_components/ValuesSection";
 import WhySection from "./body_components/WhySection";
 
 
@@ -21,6 +22,7 @@ function Body() {
     <View style={styles.container}>
       <HeroHeader></HeroHeader>
       <WhySection></WhySection>
+      <ValuesSection></ValuesSection>
     </View>
   )
 }
