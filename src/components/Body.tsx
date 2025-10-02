@@ -1,5 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import { useTheme } from "../contexts/ThemeContext";
+import ContactSection from "./body_components/contact_section/ContactSection";
 import HeroHeader from "./body_components/HeroHeader";
 import ProjectsSection from "./body_components/projects_section/ProjectsSection";
 import ServicesSection from "./body_components/services_section/ServicesSection";
@@ -15,7 +16,6 @@ function Body() {
       backgroundColor: theme.background,
       display: "flex",
       flexDirection: "column",
-      height: 10000,
     },
   });
 
@@ -27,6 +27,7 @@ function Body() {
       <TeamSection></TeamSection>
       <ServicesSection></ServicesSection>
       <ProjectsSection></ProjectsSection>
+      <ContactSection></ContactSection>
     </View>
   );
 }
