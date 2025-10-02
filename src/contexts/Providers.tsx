@@ -9,10 +9,7 @@ interface ProviderProps {
 export const Providers = ({ children }: ProviderProps) => {
   return (
     <FontProvider>
-  <ThemeProvider>
-      {children}
-      </ThemeProvider>
-      </FontProvider>
+      <ThemeProvider>{children}</ThemeProvider>
+    </FontProvider>
   );
-
 };

@@ -8,9 +8,8 @@ interface WhyCardProps {
   price: string;
 }
 
-function WhyCard({icon, title, description, price}: WhyCardProps) {
-
-  const {theme, setTheme} = useTheme()
+function WhyCard({ icon, title, description, price }: WhyCardProps) {
+  const { theme, setTheme } = useTheme();
 
   const styles = StyleSheet.create({
     container: {
@@ -20,14 +19,14 @@ function WhyCard({icon, title, description, price}: WhyCardProps) {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      gap:14,
-      padding: 24
-
-
-
+      gap: 14,
+      padding: 24,
     },
     logo: {
-      height: 150, width: 150, marginRight: 10, borderRadius: 20
+      height: 150,
+      width: 150,
+      marginRight: 10,
+      borderRadius: 20,
     },
     title: {
       fontFamily: "Orbitron-Bold",
@@ -35,26 +34,27 @@ function WhyCard({icon, title, description, price}: WhyCardProps) {
       color: theme.primary,
     },
     description: {
-      fontFamily: "Epilogue",
+      fontFamily: "Epilogue-Regular",
       fontSize: 14,
-      color: theme.primary
+      color: theme.primary,
     },
     price: {
-    fontFamily: "Epilogue-Bold",
+      fontFamily: "Epilogue-Bold",
       fontSize: 14,
-      color: theme.primary
-    }
-  })
+      color: theme.primary,
+    },
+  });
 
   return (
     <View style={styles.container}>
       <View>
         {/* <Image source={icon} /> */}
-        <Text style={styles.title}>{title}</Text></View>
+        <Text style={styles.title}>{title}</Text>
+      </View>
       <Text style={styles.description}>{description}</Text>
       <Text style={styles.price}>{price}</Text>
     </View>
-  )
+  );
 }
 
 export default WhyCard;

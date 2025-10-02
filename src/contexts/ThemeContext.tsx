@@ -15,13 +15,11 @@ interface ThemeProviderProps {
   children: ReactNode;
 }
 
-
-
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<Theme>(themeLight);
   const toggleTheme = () => {
-  setTheme(prev => prev === themeLight ? themeDark : themeLight);
-};
+    setTheme((prev) => (prev === themeLight ? themeDark : themeLight));
+  };
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>

@@ -1,13 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import { useTheme } from "../../../contexts/ThemeContext";
-import TeamCarousel from "./TeamCarousel";
+import ServicesCarousel from "./ServicesCarousel";
 
-function TeamSection() {
+function ServicesSection() {
   const { theme, setTheme } = useTheme();
 
   const styles = StyleSheet.create({
     container: {
-      backgroundColor: theme.background,
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -20,22 +19,14 @@ function TeamSection() {
       color: theme.primary,
       textAlign: "center",
     },
-    subtitleFont: {
-      fontFamily: "Epilogue-Regular",
-      fontSize: 13,
-      color: theme.primary,
-    },
   });
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titleFont}>Notre équipe de passionnés</Text>
-      <Text style={styles.subtitleFont}>
-        Balayez latéralement pour voir les autres membres de l'équipe.
-      </Text>
-      <TeamCarousel></TeamCarousel>
+      <Text style={styles.titleFont}>Nos Services</Text>
+      <ServicesCarousel></ServicesCarousel>
     </View>
   );
 }
 
-export default TeamSection;
+export default ServicesSection;

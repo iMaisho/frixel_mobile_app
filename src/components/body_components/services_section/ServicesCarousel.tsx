@@ -1,14 +1,16 @@
 import { useTheme } from "@/src/contexts/ThemeContext";
 import { FlatList, ScrollView, StyleSheet } from "react-native";
-import TeamCard from "./TeamCard";
-import TeamData from "./TeamData";
+import ServiceCard from "./ServiceCard";
+import ServicesData from "./ServicesData";
 
-function TeamCarousel() {
-  interface TeamCardProps {
-    picture: string;
-    name: string;
-    job: string;
-    description: string;
+function ServicesCarousel() {
+  interface ServiceCardProps {
+    icon: string;
+    price: string;
+    title: string;
+    subtitle: string;
+    pinpoints: string[];
+    catchphrase: string;
   }
 
   const { theme, setTheme } = useTheme();
@@ -22,7 +24,7 @@ function TeamCarousel() {
     },
   });
 
-  const DATA = TeamData;
+  const DATA = ServicesData;
 
   return (
     <ScrollView
@@ -35,17 +37,19 @@ function TeamCarousel() {
         horizontal
         showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (
-          <TeamCard
-            picture={item.picture}
-            name={item.name}
-            job={item.job}
-            description={item.description}
+          <ServiceCard
+            icon={item.icon}
+            price={item.price}
+            title={item.title}
+            subtitle={item.subtitle}
+            pinpoints={item.pinpoints}
+            catchphrase={item.catchphrase}
           />
         )}
-        keyExtractor={(item) => item.name}
+        keyExtractor={(item) => item.title}
       />
     </ScrollView>
   );
 }
 
-export default TeamCarousel;
+export default ServicesCarousel;

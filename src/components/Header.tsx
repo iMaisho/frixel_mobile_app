@@ -4,8 +4,7 @@ import Brand from "./header_components/Brand";
 import BurgerMenu from "./header_components/BurgerMenu";
 import ToggleTheme from "./header_components/ToggleTheme";
 function Header() {
-
-  const {theme} = useTheme()
+  const { theme } = useTheme();
 
   const styles = StyleSheet.create({
     container: {
@@ -15,30 +14,29 @@ function Header() {
       height: 100,
       backgroundColor: theme.primary,
       alignItems: "center",
-      borderRadius:50,
+      borderRadius: 50,
       position: "absolute",
       top: 16,
       left: 0,
       right: 0,
       zIndex: 10,
-
     },
     interactiveElements: {
       display: "flex",
       flexDirection: "row",
       height: 50,
-    }
-  })
+    },
+  });
 
   return (
     <View style={styles.container}>
       <Brand></Brand>
       <View style={styles.interactiveElements}>
-      <ToggleTheme></ToggleTheme>
+        <ToggleTheme></ToggleTheme>
         <BurgerMenu></BurgerMenu>
-        </View>
+      </View>
     </View>
-  )
+  );
 }
 
 export default Header;
