@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { useTheme } from "../../contexts/ThemeContext";
 
 interface WhyCardProps {
@@ -48,7 +48,9 @@ function WhyCard({icon, title, description, price}: WhyCardProps) {
 
   return (
     <View style={styles.container}>
-      <View><Image source={icon} /><Text style={styles.title}>{title}</Text></View>
+      <View>
+        {/* <Image source={icon} /> */}
+        <Text style={styles.title}>{title}</Text></View>
       <Text style={styles.description}>{description}</Text>
       <Text style={styles.price}>{price}</Text>
     </View>
