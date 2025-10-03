@@ -1,7 +1,6 @@
 import { useTheme } from "@/src/contexts/ThemeContext";
 import { StyleSheet, Text, View } from "react-native";
 import IconLink from "../IconLink";
-import ContactForm from "./ContactForm";
 import ContactMap from "./ContactMap";
 
 function ContactSection() {
@@ -61,7 +60,6 @@ function ContactSection() {
         </View>
       </View>
       <ContactMap></ContactMap>
-      <ContactForm></ContactForm>
     </View>
   );
 }

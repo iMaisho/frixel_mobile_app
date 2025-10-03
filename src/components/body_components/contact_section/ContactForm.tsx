@@ -16,7 +16,7 @@ const ContactForm = () => {
       backgroundColor: theme.itemBackground,
       padding: 20,
       marginBottom: 0,
-      gap: 10,
+      gap: 10, height:1000,
     },
     title: {
       fontFamily: "Orbitron-Bold",
