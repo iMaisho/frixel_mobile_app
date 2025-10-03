@@ -18,6 +18,8 @@ function TeamCarousel() {
       display: "flex",
       flexDirection: "row",
       padding: 30,
+      paddingLeft: 0,
+      paddingRight: 0,
       alignItems: "center",
     },
   });
@@ -25,11 +27,7 @@ function TeamCarousel() {
   const DATA = TeamData;
 
   return (
-    <ScrollView
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={styles.container}
-    >
+    <ScrollView contentContainerStyle={styles.container}>
       <FlatList
         data={DATA}
         horizontal

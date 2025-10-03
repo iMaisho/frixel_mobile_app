@@ -36,7 +36,7 @@ function WhyCard({ icon, title, description, price }: WhyCardProps) {
     description: {
       fontFamily: "Epilogue-Regular",
       fontSize: 14,
-      color: theme.text ,
+      color: theme.text,
     },
     price: {
       fontFamily: "Epilogue-Bold",

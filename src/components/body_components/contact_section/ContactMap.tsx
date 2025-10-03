@@ -14,7 +14,6 @@ export default function ContactMap() {
           longitudeDelta: 0.0421,
         }}
       >
-
         <Marker
           coordinate={{
             latitude: 48.83264957666373,

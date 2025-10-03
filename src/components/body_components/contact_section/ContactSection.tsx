@@ -11,7 +11,8 @@ function ContactSection() {
     container: {
       backgroundColor: theme.background,
       gap: 10,
-      padding: 24    },
+      padding: 24,
+    },
     titleFont: {
       fontFamily: "Orbitron-Bold",
       fontSize: 30,
@@ -27,8 +28,8 @@ function ContactSection() {
       alignItems: "center",
     },
     textColor: {
-      color: theme.text
-    }
+      color: theme.text,
+    },
   });
 
   return (
@@ -44,19 +45,21 @@ function ContactSection() {
         Vous êtes les bienvenus au :
       </Text>
       <View style={styles.centering}>
-      <Text style={styles.textColor}>5, Parvis Alan Turing, 75013, Paris (France)</Text>
-      <Text style={styles.textColor}>contact@frixel.fr</Text>
-      <View style={styles.row}>
-        <IconLink
-          iconName="github"
-          url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        ></IconLink>
-        <IconLink
-          iconName="linkedin"
-          url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        ></IconLink>
+        <Text style={styles.textColor}>
+          5, Parvis Alan Turing, 75013, Paris (France)
+        </Text>
+        <Text style={styles.textColor}>contact@frixel.fr</Text>
+        <View style={styles.row}>
+          <IconLink
+            iconName="github"
+            url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          ></IconLink>
+          <IconLink
+            iconName="linkedin"
+            url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          ></IconLink>
         </View>
-        </View>
+      </View>
       <ContactMap></ContactMap>
       <ContactForm></ContactForm>
     </View>
