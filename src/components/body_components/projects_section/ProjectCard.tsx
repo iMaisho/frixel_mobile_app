@@ -31,10 +31,14 @@ function ProjectCard({ image, tags, title, description }: ProjectCardProps) {
       padding: 40,
       gap: 16,
       paddingTop: 0,
-             height:700
-
+      height: 700,
     },
-    image: {height:250, width:400, borderTopLeftRadius:12, borderTopRightRadius:12},
+    image: {
+      height: 250,
+      width: 400,
+      borderTopLeftRadius: 12,
+      borderTopRightRadius: 12,
+    },
     list: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 4 },
     tags: {
       fontFamily: "Orbitron-Medium",
@@ -43,7 +47,7 @@ function ProjectCard({ image, tags, title, description }: ProjectCardProps) {
       borderWidth: 1,
       borderColor: theme.text,
       borderRadius: 10,
-      padding:10
+      padding: 10,
     },
     title: { fontFamily: "Epilogue-Bold", color: theme.text, fontSize: 24 },
     description: {
@@ -61,8 +65,12 @@ function ProjectCard({ image, tags, title, description }: ProjectCardProps) {
           data={tags}
           renderItem={({ item }) => <Text style={styles.tags}>{item}</Text>}
           keyExtractor={(item) => item}
- numColumns={3}
-  columnWrapperStyle={{ justifyContent: "flex-start", flexWrap: "wrap"}}      ></FlatList>
+          numColumns={3}
+          columnWrapperStyle={{
+            justifyContent: "flex-start",
+            flexWrap: "wrap",
+          }}
+        ></FlatList>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.description}>{description}</Text>
       </View>

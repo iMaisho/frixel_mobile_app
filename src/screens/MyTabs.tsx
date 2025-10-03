@@ -40,7 +40,7 @@ function MyTabs() {
           ),
         }}
       />
-            <Tab.Screen
+      <Tab.Screen
         name="Blog"
         component={BlogScreen}
         options={{

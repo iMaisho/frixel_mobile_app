@@ -4,7 +4,7 @@ import MyTabs from "../screens/MyTabs";
 export default function Index() {
   return (
     <Providers>
-          <MyTabs />
+      <MyTabs />
     </Providers>
   );
 }

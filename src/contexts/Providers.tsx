@@ -9,10 +9,10 @@ interface ProviderProps {
 
 export const Providers = ({ children }: ProviderProps) => {
   return (
-     <GestureHandlerRootView>
-    <FontProvider>
-      <ThemeProvider>{children}</ThemeProvider>
+    <GestureHandlerRootView>
+      <FontProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </FontProvider>
-      </GestureHandlerRootView>
+    </GestureHandlerRootView>
   );
 };

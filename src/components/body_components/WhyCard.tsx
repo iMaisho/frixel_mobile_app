@@ -22,7 +22,7 @@ function WhyCard({ iconName, title, description, price }: WhyCardProps) {
       alignItems: "center",
       gap: 14,
       padding: 24,
-      borderRadius:16
+      borderRadius: 16,
     },
     logo: {
       height: 150,
@@ -36,7 +36,6 @@ function WhyCard({ iconName, title, description, price }: WhyCardProps) {
       gap: 10,
       width: 400,
       paddingLeft: 24,
-
     },
     title: {
       fontFamily: "Orbitron-Bold",
@@ -58,7 +57,8 @@ function WhyCard({ iconName, title, description, price }: WhyCardProps) {
   return (
     <View style={styles.container}>
       <View style={styles.titleBlock}>
-<Ionicons name={iconName} size={24} color={theme.secondary} />        <Text style={styles.title}>{title}</Text>
+        <Ionicons name={iconName} size={24} color={theme.secondary} />{" "}
+        <Text style={styles.title}>{title}</Text>
       </View>
       <Text style={styles.description}>{description}</Text>
       <Text style={styles.price}>{price}</Text>
