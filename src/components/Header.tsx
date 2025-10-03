@@ -1,7 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import { useTheme } from "../contexts/ThemeContext";
 import Brand from "./header_components/Brand";
-import BurgerMenu from "./header_components/BurgerMenu";
 import ToggleTheme from "./header_components/ToggleTheme";
 function Header() {
   const { theme } = useTheme();
@@ -10,7 +9,7 @@ function Header() {
     container: {
       display: "flex",
       flexDirection: "row",
-      justifyContent: "space-around",
+      justifyContent: "space-between",
       height: 100,
       backgroundColor: theme.primary,
       alignItems: "center",
@@ -20,6 +19,8 @@ function Header() {
       left: 0,
       right: 0,
       zIndex: 10,
+      paddingLeft: 40,
+      paddingRight: 40
     },
     interactiveElements: {
       display: "flex",
@@ -31,10 +32,7 @@ function Header() {
   return (
     <View style={styles.container}>
       <Brand></Brand>
-      <View style={styles.interactiveElements}>
         <ToggleTheme></ToggleTheme>
-        <BurgerMenu></BurgerMenu>
-      </View>
     </View>
   );
 }

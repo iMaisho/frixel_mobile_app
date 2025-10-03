@@ -16,9 +16,8 @@ function ToggleTheme() {
     <TouchableOpacity style={styles.container} onPress={toggleTheme}>
       <Ionicons
         name={theme === themeLight ? "moon" : "sunny"}
-        size={24}
+        size={30}
         color={theme === themeLight ? "#00000083" : "#fffb008a"}
-        margin="auto"
       />
     </TouchableOpacity>
   );
