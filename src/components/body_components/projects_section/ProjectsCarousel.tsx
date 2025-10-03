@@ -5,7 +5,7 @@ import ProjectsData from "./ProjectsData";
 
 function ProjectsCarousel() {
   interface ProjectCardProps {
-    image: string;
+    image: any;
     tags: string[];
     title: string;
     description: string;

@@ -1,8 +1,8 @@
 import { useTheme } from "@/src/contexts/ThemeContext";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 interface TeamCardProps {
-  picture: string;
+  picture: any;
   name: string;
   job: string;
   description: string;
@@ -33,7 +33,6 @@ function TeamCard({ picture, name, job, description }: TeamCardProps) {
     image: {
       height: 200,
       width: 200,
-      backgroundColor: "blue",
     },
     name: {
       fontFamily: "Orbitron-Bold",
@@ -51,8 +50,7 @@ function TeamCard({ picture, name, job, description }: TeamCardProps) {
     <TouchableOpacity>
       <View style={styles.container}>
         <View style={styles.card}>
-          {/* <Image source={picture} /> */}
-          <View style={styles.image}></View>
+          <Image source={picture} style={styles.image} />
           <Text style={styles.name}>{name}</Text>
         </View>
         <Text style={styles.job}>{job}</Text>

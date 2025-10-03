@@ -1,8 +1,8 @@
 import { useTheme } from "@/src/contexts/ThemeContext";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 
 interface ProjectCardProps {
-  image: string;
+  image: any;
   tags: string[];
   title: string;
   description: string;
@@ -30,8 +30,11 @@ function ProjectCard({ image, tags, title, description }: ProjectCardProps) {
       borderRadius: 12,
       padding: 40,
       gap: 16,
+      paddingTop: 0,
+             height:700
+
     },
-    image: {},
+    image: {height:250, width:400, borderTopLeftRadius:12, borderTopRightRadius:12},
     list: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 4 },
     tags: {
       fontFamily: "Orbitron-Medium",
@@ -40,7 +43,7 @@ function ProjectCard({ image, tags, title, description }: ProjectCardProps) {
       borderWidth: 1,
       borderColor: theme.text,
       borderRadius: 10,
-      padding: 5,
+      padding:10
     },
     title: { fontFamily: "Epilogue-Bold", color: theme.text, fontSize: 24 },
     description: {
@@ -53,14 +56,13 @@ function ProjectCard({ image, tags, title, description }: ProjectCardProps) {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        {/* <Image source={image} /> */}
-        <View style={styles.image}></View>
+        <Image source={image} style={styles.image} />
         <FlatList
           data={tags}
           renderItem={({ item }) => <Text style={styles.tags}>{item}</Text>}
           keyExtractor={(item) => item}
-          style={styles.list}
-        ></FlatList>
+ numColumns={3}
+  columnWrapperStyle={{ justifyContent: "flex-start", flexWrap: "wrap"}}      ></FlatList>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.description}>{description}</Text>
       </View>
