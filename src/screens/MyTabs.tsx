@@ -2,6 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useTheme } from "../contexts/ThemeContext";
 import BlogScreen from "./BlogScreen";
+import ContactScreen from "./ContactScreen";
 import HomeScreen from "./HomeScreen";
 
 const Tab = createBottomTabNavigator();
@@ -10,6 +11,7 @@ function MyTabs() {
   const { theme, setTheme } = useTheme();
   return (
     <Tab.Navigator
+      initialRouteName={"Accueil"}
       screenOptions={{
         animation: "shift",
         headerStyle: {
@@ -31,10 +33,21 @@ function MyTabs() {
         tabBarInactiveTintColor: theme.primary,
       }}
     >
+            <Tab.Screen
+        name="Contact"
+        component={ContactScreen}
+        options={{
+          headerShown:false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="mail" size={size} color={color} />
+          ),
+        }}
+      />
       <Tab.Screen
         name="Accueil"
         component={HomeScreen}
         options={{
+          headerShown: false,
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),
@@ -44,6 +57,8 @@ function MyTabs() {
         name="Blog"
         component={BlogScreen}
         options={{
+                    headerShown:false,
+
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="book" size={size} color={color} />
           ),
