@@ -15,7 +15,7 @@ function Brand() {
     logoFont: {
       fontFamily: "Ethnocentric",
       fontSize: 25,
-      color: theme.background,
+      color: "white",
     },
   });
 
