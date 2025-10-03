@@ -33,7 +33,7 @@ function TeamCard({ picture, name, job, description }: TeamCardProps) {
     image: {
       height: 200,
       width: 200,
-      backgroundColor: "green",
+      backgroundColor: "blue",
     },
     name: {
       fontFamily: "Orbitron-Bold",
@@ -42,7 +42,7 @@ function TeamCard({ picture, name, job, description }: TeamCardProps) {
     },
     job: {
       fontFamily: "Epilogue-Regular",
-      color: theme.primary,
+      color: theme.text,
       fontSize: 16,
     },
   });

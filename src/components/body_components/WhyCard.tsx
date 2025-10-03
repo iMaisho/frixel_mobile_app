@@ -31,17 +31,17 @@ function WhyCard({ icon, title, description, price }: WhyCardProps) {
     title: {
       fontFamily: "Orbitron-Bold",
       fontSize: 18,
-      color: theme.primary,
+      color: theme.text,
     },
     description: {
       fontFamily: "Epilogue-Regular",
       fontSize: 14,
-      color: theme.primary,
+      color: theme.text ,
     },
     price: {
       fontFamily: "Epilogue-Bold",
       fontSize: 14,
-      color: theme.primary,
+      color: theme.text,
     },
   });
 

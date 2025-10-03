@@ -16,7 +16,7 @@ function ProjectsSection() {
     titleFont: {
       fontFamily: "Orbitron-Bold",
       fontSize: 30,
-      color: theme.primary,
+      color: theme.text,
       textAlign: "center",
     },
   });

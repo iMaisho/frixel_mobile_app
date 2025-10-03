@@ -23,17 +23,17 @@ function ValuesSection() {
     titleFont: {
       fontFamily: "Orbitron-Bold",
       fontSize: 30,
-      color: theme.primary,
+      color: theme.text,
     },
     cardTitle: {
       fontFamily: "Orbitron-Bold",
       fontSize: 20,
-      color: theme.primary,
+      color: theme.text,
     },
     text: {
       fontFamily: "Epilogue-Regular",
       fontSize: 14,
-      color: theme.primary,
+      color: theme.text,
       padding: 24,
       textAlign: "center",
     },

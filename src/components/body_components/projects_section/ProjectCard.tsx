@@ -35,17 +35,17 @@ function ProjectCard({ image, tags, title, description }: ProjectCardProps) {
     list: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 4 },
     tags: {
       fontFamily: "Orbitron-Medium",
-      color: theme.primary,
+      color: theme.text,
       fontSize: 18,
       borderWidth: 1,
-      borderColor: theme.primary,
+      borderColor: theme.text,
       borderRadius: 10,
       padding: 5,
     },
-    title: { fontFamily: "Epilogue-Bold", color: theme.primary, fontSize: 24 },
+    title: { fontFamily: "Epilogue-Bold", color: theme.text, fontSize: 24 },
     description: {
       fontFamily: "Epilogue-Regular",
-      color: theme.primary,
+      color: theme.text,
       fontSize: 16,
     },
   });

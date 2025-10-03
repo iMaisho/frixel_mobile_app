@@ -50,20 +50,20 @@ function ServiceCard({
       borderRadius: 10,
       padding: 5,
     },
-    title: { fontFamily: "Orbitron-Bold", color: theme.primary, fontSize: 20 },
+    title: { fontFamily: "Orbitron-Bold", color: theme.text, fontSize: 20 },
     subtitle: {
       fontFamily: "Epilogue-Regular",
-      color: theme.complementary,
+      color: theme.text,
       fontSize: 16,
     },
     pinpoints: {
       fontFamily: "Epilogue-Regular",
-      color: theme.primary,
+      color: theme.text,
       fontSize: 14,
     },
     catchphrase: {
       fontFamily: "Epilogue-Bold",
-      color: theme.primary,
+      color: theme.text,
       fontSize: 16,
     },
   });

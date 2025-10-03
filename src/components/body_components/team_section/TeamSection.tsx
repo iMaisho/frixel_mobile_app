@@ -17,13 +17,13 @@ function TeamSection() {
     titleFont: {
       fontFamily: "Orbitron-Bold",
       fontSize: 30,
-      color: theme.primary,
+      color: theme.text,
       textAlign: "center",
     },
     subtitleFont: {
       fontFamily: "Epilogue-Regular",
       fontSize: 13,
-      color: theme.primary,
+      color: theme.text,
     },
   });
 
