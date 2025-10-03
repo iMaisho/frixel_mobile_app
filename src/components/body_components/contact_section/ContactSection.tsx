@@ -1,6 +1,7 @@
 import { useTheme } from "@/src/contexts/ThemeContext";
 import { StyleSheet, Text, View } from "react-native";
 import IconLink from "../IconLink";
+import ContactForm from "./ContactForm";
 import ContactMap from "./ContactMap";
 
 function ContactSection() {
@@ -10,12 +11,11 @@ function ContactSection() {
     container: {
       backgroundColor: theme.background,
       gap: 10,
-      padding: 24,
-    },
+      padding: 24    },
     titleFont: {
       fontFamily: "Orbitron-Bold",
       fontSize: 30,
-      color: theme.primary,
+      color: theme.text,
       textAlign: "center",
     },
     row: {
@@ -23,22 +23,29 @@ function ContactSection() {
       flexDirection: "row",
       gap: 10,
     },
+    centering: {
+      alignItems: "center",
+    },
+    textColor: {
+      color: theme.text
+    }
   });
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titleFont}>Nous Contacter</Text>
-      <Text>
+      <Text style={styles.titleFont}>Nous Rencontrer</Text>
+      <Text style={styles.textColor}>
         Nous sommes en région parisienne mais restons mobiles, évidemment. Nous
         pouvons nous déplacer dans les locaux clients comme travailler à
         distance.
       </Text>
-      <Text>
+      <Text style={styles.textColor}>
         Vous souhaitez discuter avec nos équipes et nous rencontrer en dehors ?
         Vous êtes les bienvenus au :
       </Text>
-      <Text>5, Parvis Alan Turing, 75013, Paris (France)</Text>
-      <Text>contact@frixel.fr</Text>
+      <View style={styles.centering}>
+      <Text style={styles.textColor}>5, Parvis Alan Turing, 75013, Paris (France)</Text>
+      <Text style={styles.textColor}>contact@frixel.fr</Text>
       <View style={styles.row}>
         <IconLink
           iconName="github"
@@ -48,8 +55,10 @@ function ContactSection() {
           iconName="linkedin"
           url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         ></IconLink>
-      </View>
+        </View>
+        </View>
       <ContactMap></ContactMap>
+      <ContactForm></ContactForm>
     </View>
   );
 }

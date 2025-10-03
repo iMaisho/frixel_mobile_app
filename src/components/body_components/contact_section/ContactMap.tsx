@@ -14,7 +14,7 @@ export default function ContactMap() {
           longitudeDelta: 0.0421,
         }}
       >
-        {" "}
+
         <Marker
           coordinate={{
             latitude: 48.83264957666373,
@@ -22,7 +22,7 @@ export default function ContactMap() {
           }}
           title="Frixel"
           description="5 parvis Alan Turing"
-        />{" "}
+        />
       </MapView>
     </View>
   );
