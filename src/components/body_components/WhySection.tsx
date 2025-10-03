@@ -38,7 +38,7 @@ function WhySection() {
         <Text style={styles.logoFont}>Frixel ?</Text>
       </View>
       <WhyCard
-        icon="prout"
+        iconName="flask-outline"
         title="MVPaaS"
         description="Vous avez une idée de produit mais vous ne savez pas comment vous projeter sur sa viabilité / faisabilité sur le long terme ?
 Nous créons pour vous un MVP as a Service : une version testable, rapide et fonctionnelle de votre idée, conçue pour valider votre concept, séduire vos premiers utilisateurs et convaincre vos investisseurs.
@@ -47,7 +47,7 @@ Du prototype au lancement, nous gérons tout — vous vous concentrez sur la vis
       ></WhyCard>
 
       <WhyCard
-        icon="prout"
+        iconName="pricetags-outline"
         title="Tarification attractive"
         description="Bénéficiez de talents experts basés sur Paris, avec la réactivité et la proximité que vous attendez, tout en profitant de tarifs aussi compétitifs que le nearshore.
 Pas de décalage horaire, pas de barrière culturelle — juste la performance au meilleur coût."
@@ -55,7 +55,7 @@ Pas de décalage horaire, pas de barrière culturelle — juste la performance a
       ></WhyCard>
 
       <WhyCard
-        icon="prout"
+        iconName="flame-outline"
         title="G33KZ"
         description="Notre passion est de construire des applications web, mobiles et métiers sur mesure afin d'améliorer l'expérience utilisateur.
 Nous utilisons des technologies modernes comme Elixir, utilisées par les acteurs majeurs du temps réel et de la communication multi-utilisateurs comme Facebook Messenger, Discord, Whatsapp, Pinterest"

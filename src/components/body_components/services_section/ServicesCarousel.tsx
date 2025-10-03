@@ -38,7 +38,7 @@ function ServicesCarousel() {
         showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (
           <ServiceCard
-            icon={item.icon}
+            iconName={item.iconName}
             price={item.price}
             title={item.title}
             subtitle={item.subtitle}

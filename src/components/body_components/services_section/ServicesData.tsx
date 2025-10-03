@@ -1,6 +1,6 @@
 const ServicesData = [
   {
-    icon: "",
+    iconName: "rocket-outline",
     price: "à partir de 15 000 €",
     title: "Pack Concept Live",
     subtitle: "Prototypage Rapide / PoC / MVP",
@@ -17,7 +17,7 @@ const ServicesData = [
       "Donnez vie à vos concepts et validez-les rapidement auprès de vos futurs utilisateurs ou investisseurs.",
   },
   {
-    icon: "",
+    iconName: "construct-outline",
     price: "à partir de 20 000 €",
     title: "Pack Tailor Made",
     subtitle: "Applications Métiers",
@@ -40,7 +40,7 @@ const ServicesData = [
       "Profitez d’outils conçus sur-mesure pour répondre à vos besoins métiers et améliorer votre productivité.",
   },
   {
-    icon: "",
+    iconName: "people-outline",
     price: "à partir de 380 €/jour",
     title: "Pack Task Force",
     subtitle: "Dev à la Demande",

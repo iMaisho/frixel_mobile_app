@@ -1,8 +1,9 @@
 import { useTheme } from "@/src/contexts/ThemeContext";
+import { Ionicons } from "@expo/vector-icons";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 
 interface ServiceCardProps {
-  icon: string;
+  iconName: any;
   price: string;
   title: string;
   subtitle: string;
@@ -11,7 +12,7 @@ interface ServiceCardProps {
 }
 
 function ServiceCard({
-  icon,
+  iconName,
   price,
   title,
   subtitle,
@@ -40,7 +41,6 @@ function ServiceCard({
       padding: 40,
       gap: 16,
     },
-    icon: {},
     price: {
       fontFamily: "Epilogue-Regular",
       color: theme.secondary,
@@ -71,8 +71,7 @@ function ServiceCard({
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        {/* <Image source={picture} /> */}
-        <View style={styles.icon}></View>
+        <Ionicons name={iconName} size={48} color={theme.text} />
         <Text style={styles.price}>{price}</Text>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.subtitle}>{subtitle}</Text>
