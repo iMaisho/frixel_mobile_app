@@ -7,10 +7,11 @@ function ContactScreen() {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       keyboardVerticalOffset={Platform.OS === "ios" ? 90 : 110}
     >
-        <View>
-          <ContactForm></ContactForm>
-        </View></KeyboardAvoidingView>); }
-
-
+      <View>
+        <ContactForm></ContactForm>
+      </View>
+    </KeyboardAvoidingView>
+  );
+}
 
 export default ContactScreen;

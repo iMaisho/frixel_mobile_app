@@ -33,11 +33,11 @@ function MyTabs() {
         tabBarInactiveTintColor: theme.primary,
       }}
     >
-            <Tab.Screen
+      <Tab.Screen
         name="Contact"
         component={ContactScreen}
         options={{
-          headerShown:false,
+          headerShown: false,
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="mail" size={size} color={color} />
           ),
@@ -57,7 +57,7 @@ function MyTabs() {
         name="Blog"
         component={BlogScreen}
         options={{
-                    headerShown:false,
+          headerShown: false,
 
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="book" size={size} color={color} />

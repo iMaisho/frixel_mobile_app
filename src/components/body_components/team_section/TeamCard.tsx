@@ -11,8 +11,7 @@ interface TeamCardProps {
 
 function TeamCard({ picture, name, job, description }: TeamCardProps) {
   const { theme, setTheme } = useTheme();
-    const [visible, setVisible] = useState(false);
-
+  const [visible, setVisible] = useState(false);
 
   const styles = StyleSheet.create({
     container: {
@@ -47,9 +46,18 @@ function TeamCard({ picture, name, job, description }: TeamCardProps) {
       color: theme.text,
       fontSize: 16,
     },
-    modal:{ backgroundColor: theme.background, padding: 20, borderRadius: 10 },
-    descriptionBox: { width: 400, marginTop: 20, backgroundColor:theme.itemBackground, padding:50},
-    descriptionText:{fontFamily:"UbuntuMono-Regular", fontSize:16, color:theme.text}
+    modal: { backgroundColor: theme.background, padding: 20, borderRadius: 10 },
+    descriptionBox: {
+      width: 400,
+      marginTop: 20,
+      backgroundColor: theme.itemBackground,
+      padding: 50,
+    },
+    descriptionText: {
+      fontFamily: "UbuntuMono-Regular",
+      fontSize: 16,
+      color: theme.text,
+    },
   });
 
   return (
@@ -63,20 +71,20 @@ function TeamCard({ picture, name, job, description }: TeamCardProps) {
       </View>
       <Modal transparent visible={visible} animationType="fade">
         <Pressable
-          style={{ flex: 1, justifyContent: "center", alignItems: "center"}}
+          style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
           onPress={() => setVisible(false)}
         >
           <View style={styles.modal}>
-<View style={styles.container}>
-        <View style={styles.card}>
-          <Image source={picture} style={styles.image} />
-          <Text style={styles.name}>{name}</Text>
-        </View>
+            <View style={styles.container}>
+              <View style={styles.card}>
+                <Image source={picture} style={styles.image} />
+                <Text style={styles.name}>{name}</Text>
+              </View>
               <Text style={styles.job}>{job}</Text>
               <View style={styles.descriptionBox}>
                 <Text style={styles.descriptionText}>{description}</Text>
               </View>
-      </View>
+            </View>
           </View>
         </Pressable>
       </Modal>

@@ -20,7 +20,7 @@ function Header() {
       right: 0,
       zIndex: 10,
       paddingLeft: 40,
-      paddingRight: 40
+      paddingRight: 40,
     },
     interactiveElements: {
       display: "flex",
@@ -32,7 +32,7 @@ function Header() {
   return (
     <View style={styles.container}>
       <Brand></Brand>
-        <ToggleTheme></ToggleTheme>
+      <ToggleTheme></ToggleTheme>
     </View>
   );
 }

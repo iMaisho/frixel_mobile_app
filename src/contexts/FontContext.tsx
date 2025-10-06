@@ -7,7 +7,7 @@ interface FontProviderProps {
 
 export const FontProvider = ({ children }: FontProviderProps) => {
   const [fontsLoaded] = useFonts({
-    "Ethnocentric": require("../assets/fonts/ethnocentric.ttf"),
+    Ethnocentric: require("../assets/fonts/ethnocentric.ttf"),
 
     "Orbitron-Light": require("../assets/fonts/orbitron-light.otf"),
     "Orbitron-Medium": require("../assets/fonts/orbitron-medium.otf"),
