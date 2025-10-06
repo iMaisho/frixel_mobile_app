@@ -1,20 +1,29 @@
+import { createStackNavigator } from "@react-navigation/stack";
+import React from "react";
 import { KeyboardAvoidingView, Platform, View } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
-import Header from "../components/Header";
+import BlogComponent from "../components/blog_components/BlogComponent";
+import BlogPost from "../components/blog_components/BlogPost";
+import { useTheme } from "../contexts/ThemeContext";
+
+const Stack = createStackNavigator(); // <- hors du composant
 
 function BlogScreen() {
+  const { theme } = useTheme();
+
   return (
     <KeyboardAvoidingView
+      style={{ flex: 1 }}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       keyboardVerticalOffset={Platform.OS === "ios" ? 90 : 110}
     >
-      <Header></Header>
-
-        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-          <View style={{ flex: 1, justifyContent: "space-between" }}>
-          </View>
-        </ScrollView></KeyboardAvoidingView>); }
-
-
+      <View style={{ flex: 1, backgroundColor: theme.background }}>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="BlogComponent" component={BlogComponent} />
+          <Stack.Screen name="BlogPost" component={BlogPost} />
+        </Stack.Navigator>
+      </View>
+    </KeyboardAvoidingView>
+  );
+}
 
 export default BlogScreen;
