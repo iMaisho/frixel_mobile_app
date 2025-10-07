@@ -25,9 +25,7 @@ function ProjectsCarousel() {
   const DATA = ProjectsData;
 
   return (
-    <View
-      style={styles.container}
-    >
+    <View style={styles.container}>
       <FlatList
         data={DATA}
         horizontal

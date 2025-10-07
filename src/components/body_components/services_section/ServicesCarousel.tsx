@@ -27,9 +27,7 @@ function ServicesCarousel() {
   const DATA = ServicesData;
 
   return (
-    <View
-      style={styles.container}
-    >
+    <View style={styles.container}>
       <FlatList
         data={DATA}
         horizontal
