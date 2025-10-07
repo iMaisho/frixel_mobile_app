@@ -57,7 +57,7 @@ function WhyCard({ iconName, title, description, price }: WhyCardProps) {
   return (
     <View style={styles.container}>
       <View style={styles.titleBlock}>
-        <Ionicons name={iconName} size={24} color={theme.secondary} />{" "}
+        <Ionicons name={iconName} size={24} color={theme.secondary} />
         <Text style={styles.title}>{title}</Text>
       </View>
       <Text style={styles.description}>{description}</Text>

@@ -122,7 +122,7 @@ const ContactForm = () => {
               placeholder="Votre message (requis)"
               placeholderTextColor="#999"
             />
-          </View>{" "}
+          </View>
           <View style={styles.field}>
             <Text style={styles.label}>Société </Text>
             <TextInput

@@ -1,5 +1,5 @@
 import { useTheme } from "@/src/contexts/ThemeContext";
-import { FlatList, ScrollView, StyleSheet } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import ProjectCard from "./ProjectCard";
 import ProjectsData from "./ProjectsData";
 
@@ -25,10 +25,8 @@ function ProjectsCarousel() {
   const DATA = ProjectsData;
 
   return (
-    <ScrollView
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={styles.container}
+    <View
+      style={styles.container}
     >
       <FlatList
         data={DATA}
@@ -44,7 +42,7 @@ function ProjectsCarousel() {
         )}
         keyExtractor={(item) => item.title}
       />
-    </ScrollView>
+    </View>
   );
 }
 
