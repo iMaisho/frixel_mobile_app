@@ -3,6 +3,7 @@ import React from "react";
 import { KeyboardAvoidingView, Platform, View } from "react-native";
 import BlogComponent from "../components/blog_components/BlogComponent";
 import BlogPost from "../components/blog_components/BlogPost";
+import BlogPostReader from "../components/blog_components/BlogPostReader";
 import { useTheme } from "../contexts/ThemeContext";
 
 const Stack = createStackNavigator(); // <- hors du composant
@@ -20,6 +21,7 @@ function BlogScreen() {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="BlogComponent" component={BlogComponent} />
           <Stack.Screen name="BlogPost" component={BlogPost} />
+          <Stack.Screen name="BlogPostReader" component={BlogPostReader} />
         </Stack.Navigator>
       </View>
     </KeyboardAvoidingView>

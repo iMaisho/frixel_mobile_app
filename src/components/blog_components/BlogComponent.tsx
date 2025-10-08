@@ -2,6 +2,7 @@ import { useTheme } from "@/src/contexts/ThemeContext";
 import { FlatList, StyleSheet, View } from "react-native";
 import BlogCard from "./BlogCard";
 import BlogData from "./BlogData";
+import ToggleTheme from "./ToggleTheme";
 
 function BlogComponent() {
   const { theme, setTheme } = useTheme();
@@ -69,6 +70,7 @@ function BlogComponent() {
 
   return (
     <View>
+      <ToggleTheme></ToggleTheme>
       <FlatList
         data={DATA}
         renderItem={({ item }) => (

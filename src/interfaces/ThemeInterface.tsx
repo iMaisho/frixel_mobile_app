@@ -1,4 +1,5 @@
 export default interface Theme {
+  name: string;
   primary: string;
   secondary: string;
   background: string;

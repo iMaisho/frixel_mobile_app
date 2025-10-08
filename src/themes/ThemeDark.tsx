@@ -1,6 +1,7 @@
 import Theme from "../interfaces/ThemeInterface";
 
 const themeDark: Theme = {
+  name: "dark",
   primary: "#6B4BA1",
   secondary: "#FF3C6B",
   background: "#1E1E2F",

@@ -55,6 +55,7 @@ function BlogCard({
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      backgroundColor: theme.background,
     },
     card: {
       backgroundColor: theme.itemBackground,
@@ -139,7 +140,21 @@ function BlogCard({
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.author}>par {author}</Text>
 
-          <Markdown>{content.slice(0, 300).concat("...")}</Markdown>
+          <Markdown
+            style={{
+              blockquote: {
+                backgroundColor: theme.background,
+                borderLeftWidth: 4,
+                borderLeftColor: theme.primary,
+                paddingHorizontal: 12,
+                paddingVertical: 8,
+                marginVertical: 8,
+              },
+              text: { color: theme.text },
+            }}
+          >
+            {content.slice(0, 300).concat("...")}
+          </Markdown>
 
           <Text style={styles.date}>{date}</Text>
         </View>

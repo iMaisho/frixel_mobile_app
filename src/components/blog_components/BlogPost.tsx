@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import Markdown from "react-native-markdown-display";
 import { useTheme } from "../../contexts/ThemeContext";
+import ToggleReadingMode from "./ToggleReadingMode";
+import ToggleTheme from "./ToggleTheme";
 
 type RootStackParamList = {
   BlogList: undefined;
@@ -77,7 +79,14 @@ const BlogPost = () => {
 
   return (
     <View style={{ flex: 1 }}>
-        <ScrollView contentContainerStyle={styles.container}>
+      <ToggleTheme></ToggleTheme>
+      <ToggleReadingMode
+        title={title}
+        content={content}
+        author={author}
+        date={date}
+      ></ToggleReadingMode>
+      <ScrollView contentContainerStyle={styles.container}>
         <Image source={image} style={styles.image} />
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.author}>
@@ -97,7 +106,22 @@ const BlogPost = () => {
           ></FlatList>
         </View>
 
-        <Markdown>{content}</Markdown>
+        <Markdown
+          style={{
+            blockquote: {
+              backgroundColor: theme.background,
+              borderLeftWidth: 4,
+              borderLeftColor: theme.primary,
+              paddingHorizontal: 12,
+              paddingVertical: 8,
+              marginVertical: 8,
+            },
+            text: { color: theme.text },
+            link: { color: theme.complementary },
+          }}
+        >
+          {content}
+        </Markdown>
       </ScrollView>
     </View>
   );
