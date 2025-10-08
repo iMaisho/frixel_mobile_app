@@ -58,7 +58,6 @@ function MyTabs() {
         component={BlogScreen}
         options={{
           headerShown: false,
-
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="book" size={size} color={color} />
           ),

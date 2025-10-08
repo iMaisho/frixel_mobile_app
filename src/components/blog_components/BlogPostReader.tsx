@@ -1,5 +1,11 @@
-import { RouteProp, useRoute } from "@react-navigation/native";
-import React from "react";
+import {
+  RouteProp,
+  useFocusEffect,
+  useNavigation,
+  useRoute,
+} from "@react-navigation/native";
+import * as Brightness from "expo-brightness";
+import React, { useCallback, useLayoutEffect } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import Markdown from "react-native-markdown-display";
 import { useTheme } from "../../contexts/ThemeContext";
@@ -30,6 +36,46 @@ const BlogPostReader = () => {
   const { title, content, author, date } = route.params;
   const { theme, setTheme } = useTheme();
   const isLight = theme.name === "light";
+  const navigation = useNavigation();
+
+  useFocusEffect(
+    useCallback(() => {
+      const adjustBrightness = async () => {
+        const { status } = await Brightness.requestPermissionsAsync();
+        if (status === "granted") {
+          const original = await Brightness.getBrightnessAsync();
+          await Brightness.setBrightnessAsync(0.3); // réduit la luminosité à 30%
+
+          // Restore brightness on exit
+          return () => {
+            Brightness.setBrightnessAsync(original);
+          };
+        }
+      };
+
+      let restore: (() => void) | undefined;
+      adjustBrightness().then((cleanup) => (restore = cleanup));
+
+      return () => {
+        if (restore) restore();
+      };
+    }, []),
+  );
+
+  useLayoutEffect(() => {
+    // cacher la tab bar
+    navigation.getParent()?.setOptions({
+      tabBarStyle: { display: "none" },
+    });
+
+    // la réafficher quand on quitte
+    return () => {
+      navigation.getParent()?.setOptions({
+        tabBarStyle: undefined, // remet le style par défaut
+      });
+    };
+  }, [navigation]);
+
   const styles = StyleSheet.create({
     container: {
       gap: 12,
