@@ -8,8 +8,8 @@ import * as Brightness from "expo-brightness";
 import React, { useCallback, useLayoutEffect } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import Markdown from "react-native-markdown-display";
+import ToggleTheme from "../../components/blog_components/ToggleTheme";
 import { useTheme } from "../../contexts/ThemeContext";
-import ToggleTheme from "./ToggleTheme";
 
 type RootStackParamList = {
   BlogList: undefined;

@@ -9,9 +9,9 @@ import {
   View,
 } from "react-native";
 import Markdown from "react-native-markdown-display";
+import ToggleReadingMode from "../../components/blog_components/ToggleReadingMode";
+import ToggleTheme from "../../components/blog_components/ToggleTheme";
 import { useTheme } from "../../contexts/ThemeContext";
-import ToggleReadingMode from "./ToggleReadingMode";
-import ToggleTheme from "./ToggleTheme";
 
 type RootStackParamList = {
   BlogList: undefined;

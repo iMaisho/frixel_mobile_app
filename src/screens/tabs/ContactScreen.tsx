@@ -1,5 +1,5 @@
 import { KeyboardAvoidingView, Platform, View } from "react-native";
-import ContactForm from "../components/body_components/contact_section/ContactForm";
+import ContactForm from "../../components/body_components/contact_section/ContactForm";
 
 function ContactScreen() {
   return (

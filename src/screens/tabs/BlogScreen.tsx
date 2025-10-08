@@ -1,12 +1,12 @@
+import { useTheme } from "@/src/contexts/ThemeContext";
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
 import { KeyboardAvoidingView, Platform, View } from "react-native";
-import BlogComponent from "../components/blog_components/BlogComponent";
-import BlogPost from "../components/blog_components/BlogPost";
-import BlogPostReader from "../components/blog_components/BlogPostReader";
-import { useTheme } from "../contexts/ThemeContext";
+import BlogComponent from "../../components/blog_components/BlogComponent";
+import BlogPost from "../blog_screens/BlogPost";
+import BlogPostReader from "../blog_screens/BlogPostReader";
 
-const Stack = createStackNavigator(); // <- hors du composant
+const Stack = createStackNavigator();
 
 function BlogScreen() {
   const { theme } = useTheme();
