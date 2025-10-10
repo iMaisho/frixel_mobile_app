@@ -4,6 +4,7 @@ import { useTheme } from "../contexts/ThemeContext";
 import BlogScreen from "./tabs/BlogScreen";
 import ContactScreen from "./tabs/ContactScreen";
 import HomeScreen from "./tabs/HomeScreen";
+import QuotationScreen from "./tabs/QuotationScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -34,22 +35,32 @@ function MyTabs() {
       }}
     >
       <Tab.Screen
-        name="Contact"
-        component={ContactScreen}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="mail" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Accueil"
         component={HomeScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Devis"
+        component={QuotationScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="wallet" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Contact"
+        component={ContactScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="mail" size={size} color={color} />
           ),
         }}
       />
