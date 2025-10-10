@@ -13,7 +13,7 @@ function HeroHeader() {
       justifyContent: "center",
       alignItems: "center",
       gap: 20,
-      paddingTop: 100,
+      paddingTop: 150,
     },
     logo: { height: 150, width: 150, marginRight: 10, borderRadius: 20 },
     logoFont: {

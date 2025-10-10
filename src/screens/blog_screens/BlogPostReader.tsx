@@ -81,6 +81,7 @@ const BlogPostReader = () => {
       gap: 12,
       padding: 18,
       backgroundColor: isLight ? "#ffffffff" : "#1F1F1F",
+      paddingTop: 90,
     },
     list: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 4 },
     title: {

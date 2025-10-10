@@ -16,8 +16,8 @@ function ToggleTheme() {
       borderRadius: 50,
       position: "absolute",
       zIndex: 999,
-      right: 30,
-      top: 30,
+      right: 20,
+      top: 90,
     },
   });
 

@@ -39,8 +39,8 @@ const ToggleReadingMode: React.FC<Props> = ({
       borderRadius: 50,
       position: "absolute",
       zIndex: 999,
-      right: 30,
-      top: 90,
+      right: 20,
+      top: 150,
     },
   });
 

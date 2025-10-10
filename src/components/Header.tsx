@@ -15,7 +15,7 @@ function Header() {
       alignItems: "center",
       borderRadius: 50,
       position: "absolute",
-      top: 16,
+      top: 50,
       left: 0,
       right: 0,
       zIndex: 10,
